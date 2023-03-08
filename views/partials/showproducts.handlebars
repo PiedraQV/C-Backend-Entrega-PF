@@ -1,0 +1,35 @@
+<section class="container row py-4">
+	<div >
+		<div class="d-flex py-4">
+		<h4 class="px-2">Volver a la pantalla Config</h4>
+		<form action="/login" method="GET">
+			<div>
+				<input class="btn btn-success " type='submit' value='Regresar' />
+			</div>
+		</form>
+		<br>
+		<br>	
+		</div>
+	</div>
+
+	<div class="d-flex">
+				{{#each products}}
+
+            <div class="card mx-2 my-2" style="width: 18rem;">
+				
+ 				 <div class="card-body">
+
+ 				 <img src={{ imagePath }} class="card-img-top" alt={{ title }}>
+
+ 				   <h5 class="card-title">{{ title }}</h5>
+ 				   <p class="card-text">{{ description }}</p>
+				   <p class="card-text">{{ price }}</p>
+ 				   <a href="/cart/add-to-cart/{{_id}}" class="btn  btn-primary ">Add to cart</a>
+
+ 				 </div>
+			
+			</div>
+				{{/each}}
+
+	</div>
+</section>
